@@ -1,5 +1,7 @@
 #Documento de Recopilación de Requisitos
+
 ##Reunión 01/10/2019
+
 El cliente solicita diseñar una base de datos para gestionar, controlar, actualizar y revisar  el padrón municipal en los municipios españoles.Estos padrones municipales se gestionan por medios informáticos. 
 
 El objetivo principal más importante del Ayuntamiento es la de revisar los núcleos de población y la división de las secciones del término municipal (responsabilizándose de cada uno de ellos) con el fin de alcanzar la concordancia del padrón municipal con la realidad.
