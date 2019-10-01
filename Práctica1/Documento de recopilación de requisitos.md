@@ -1,6 +1,6 @@
-#Documento de Recopilación de Requisitos
+# Documento de Recopilación de Requisitos
 
-##Reunión 01/10/2019
+## Reunión 01/10/2019
 
 El cliente solicita diseñar una base de datos para gestionar, controlar, actualizar y revisar  el padrón municipal en los municipios españoles.Estos padrones municipales se gestionan por medios informáticos. 
 
