@@ -1,6 +1,7 @@
 # Histórico de las pruebas con postgresql
 
 usuario@ubuntu:/home$ sudo su postgres
+
 postgres@ubuntu:/home$ psql
 postgres=# CREATE DATABASE pract1;
 CREATE DATABASE
