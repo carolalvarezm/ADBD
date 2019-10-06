@@ -1,16 +1,16 @@
 # Histórico de las pruebas con postgresql
 
-Entrando en el sistema.
+Entrando en el sistema
 ```
 usuario@ubuntu:/home$ sudo su postgres
 postgres@ubuntu:/home$ psql
 ```
-Creando la primera Base de datos.
+Creando la primera Base de datos
 ```
 postgres=# CREATE DATABASE pract1;
 CREATE DATABASE
 ```
-Listando las bases de datos existentes.
+Listando las bases de datos existentes
 ```
 postgres=# \l
                                   List of databases
@@ -24,13 +24,13 @@ postgres=# \l
            |          |          |             |             | postgres=CTc/postgres
 (4 rows)
 ```
-Conentándonos a la base de datos que acabamos de crear.
+Conentándonos a la base de datos que acabamos de crear
 ```
 postgres=# \c pract1 postgres
 You are now connected to database "pract1" as 
 "postgres".
 ```
-Creando la tabla usuarios.
+Creando la tabla usuarios
 ```
 pract1=# create table usuarios(
 pract1(# nombre varchar(30),
@@ -38,7 +38,7 @@ pract1(# clave varchar(10)
 pract1(# );
 CREATE TABLE
 ```
-Listando las tablas existentes.
+Listando las tablas existentes
 ```
 pract1=# \dt
           List of relations
