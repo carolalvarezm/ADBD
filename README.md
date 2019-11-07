@@ -7,6 +7,6 @@
 * *Práctica 3: Modelo Conceptual :* [Práctica 3](https://github.com/alu0100944723/ADBD/tree/master/Pr%C3%A1ctica%203)
 * *Práctica 4: Diseño Viveros :* [Práctica 4](https://github.com/alu0100944723/ADBD/tree/master/Pr%C3%A1ctica%204)
 * *Práctica 5: Diseño Club de baile :* [Práctica 5](https://github.com/alu0100944723/ADBD/tree/master/Pr%C3%A1ctica5)
-
+* *Práctica 5: Modelo Lógico Relacional:Viveros :* [Práctica 6](https://github.com/alu0100944723/ADBD/tree/master/Pr%C3%A1ctica6)
 #### Seminarios
 * *Seminario 1:Conclusiones de los artículos:*  [Seminario 1](https://view.genial.ly/5d9499ee50b5040f6eda7e74/vertical-infographic-genially-sin-titulo)
