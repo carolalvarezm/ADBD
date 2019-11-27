@@ -10,5 +10,6 @@
 * *Práctica 6: Modelo Lógico Relacional:Viveros :* [Práctica 6](https://github.com/alu0100944723/ADBD/tree/master/Pr%C3%A1ctica6)
 * *Práctica 7: Disparadores :* [Práctica 7](https://github.com/alu0100944723/ADBD/tree/master/Pr%C3%A1ctica7)
 * *Práctica 8: Ejercicio Objeto-Relacional :* [Práctica 8](https://github.com/alu0100944723/ADBD/tree/master/Pr%C3%A1ctica8)
+* *Práctica 9: Diseño e implementacion Farmacias :* [Práctica 9](https://github.com/alu0100944723/ADBD/tree/master/Pr%C3%A1ctica9)
 #### Seminarios
 * *Seminario 1:Conclusiones de los artículos:*  [Seminario 1](https://view.genial.ly/5d9499ee50b5040f6eda7e74/vertical-infographic-genially-sin-titulo)
