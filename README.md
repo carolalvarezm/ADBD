@@ -13,6 +13,6 @@
 * *Práctica 9: Diseño e implementacion Farmacias :* [Práctica 9](https://github.com/alu0100944723/ADBD/tree/master/Pr%C3%A1ctica9)
 #### Seminarios
 * *Seminario 1:Conclusiones de los artículos:*  [Seminario 1](https://view.genial.ly/5d9499ee50b5040f6eda7e74/vertical-infographic-genially-sin-titulo)
-* *Seminario 2: Índice del trabajo teórico :* [Seminario 2](https://github.com/alu0100944723/ADBD/tree/master/Seminario2)
+* *Seminario 2: Índice del trabajo teórico :* [Seminario 2](https://github.com/alu0100944723/ADBD/blob/master/Seminario2/Trabajo%20Teoria%20-%20Master%20Data%20Management%20.pdf)
 #### Trabajo de Teoría : Master Data Management
 [Master Data Management](https://docs.google.com/presentation/d/1m5ux5Zd0nRih3QfVsFsKJz4WDjDIzqWmCz8QfyfwB7I/edit?usp=sharing)
