@@ -545,6 +545,22 @@ CREATE TRIGGER mucho_tiempo_almacen AFTER UPDATE
 ON Producto FOR EACH ROW
 EXECUTE PROCEDURE DescontarCincuentaPorCiento();
 ```
+##### Disparador para los productos a punto de agotarse:
+[Enlace al Script](https://github.com/alu0100944723/ADBD/blob/master/Proyecto%20Final/cincoDiasTrigger.sql)
+```SQL
+
+CREATE OR REPLACE FUNCTION pedirProducto()
+RETURNS TRIGGER AS $pedirProducto()$
+BEGIN
+INSERT INTO Producto_Pedido(ID_Producto,ID_Pedido) VALUES(NEW.ID,NEW.Lote) WHERE Stock <= 1.0;
+END;
+$pedirProducto()$ LANGUAGE plpgsql;
+
+CREATE TRIGGER SOLICIRAR_PRODUCTO AFTER UPDATE 
+ON Producto FOR EACH ROW 
+EXECUTE PROCEDURE pedirProducto();
+```
+
 
 #### Carga de los datos y pruebas
 Dentro del siguiente documento se encuentran las pruebas de todos los scripts:
