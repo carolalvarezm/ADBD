@@ -13,11 +13,12 @@ En el siguiente documento se encuentran las definiciones del Modelo Relacional:
 [Enlace al documento ](https://github.com/alu0100944723/ADBD/blob/master/Proyecto%20Final/GrafoRelacional.pdf)
 ![Grafo Relacional](https://github.com/alu0100944723/ADBD/blob/master/Proyecto%20Final/Modelo%20Relacional.png)
 #### Diagrama UML
-[Enlace al documento ASIClases](http://github.com)
-![Diagrama UML](https://octodex.github.com/images/yaktocat.png)
+En el siguiente documento se encuentran las definiciones del diagrama UML:
+[Enlace al documento ASIClases](https://github.com/alu0100944723/ADBD/blob/master/Proyecto%20Final/ASIClases.pdf)
+![Diagrama UML](https://github.com/alu0100944723/ADBD/blob/master/Proyecto%20Final/UML.png)
 #### Scripts
 [Enlace al Script de creación](https://github.com/alu0100944723/ADBD/blob/master/Proyecto%20Final/Scrip_Cargadedatos.sql)
-[Enlace al documento ScriptCreation](http://github.com) 
+[Enlace al documento ScriptCreation](https://github.com/alu0100944723/ADBD/blob/master/Proyecto%20Final/ScriptCreacion.pdf) 
 ##### Código para la creación de las tablas:
 ```SQL
 
@@ -545,4 +546,4 @@ EXECUTE PROCEDURE DescontarCincuentaPorCiento();
 
 #### Carga de los datos y pruebas
 Dentro del siguiente documento se encuentran las pruebas de todos los scripts:
-[Enlace al documento CSI8](http://github.com)
+[Enlace al documento CSI8](https://github.com/alu0100944723/ADBD/blob/master/Proyecto%20Final/CSI8.pdf)
