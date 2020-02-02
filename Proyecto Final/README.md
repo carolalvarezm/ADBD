@@ -4,6 +4,5 @@
 #### Modelo E/R
 #### Modelo Relacional
 #### Diagrama UML
-#### Scripts de carga del código 
-#### Disparadores
-#### Pruebas
+#### Scripts
+#### Carga de los datos
