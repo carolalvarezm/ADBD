@@ -18,6 +18,8 @@ En el siguiente documento se encuentran las definiciones del diagrama UML:
 ![Diagrama UML](https://github.com/alu0100944723/ADBD/blob/master/Proyecto%20Final/UML.png)
 #### Scripts
 [Enlace al Script de creación](https://github.com/alu0100944723/ADBD/blob/master/Proyecto%20Final/Scrip_Cargadedatos.sql)
+
+En el siguiente documento se encuentran las definiciones del Modelo Relacional:
 [Enlace al documento ScriptCreation](https://github.com/alu0100944723/ADBD/blob/master/Proyecto%20Final/ScriptCreacion.pdf) 
 ##### Código para la creación de las tablas:
 ```SQL
