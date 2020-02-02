@@ -1,11 +1,21 @@
 # Administración y Diseño de Bases de Datos
 ## Proyecto Final
 ### Alumnos: Carolina Álvarez Martín y Leonardo Dorta Bejarano
+#### Requisitos
+En el siguiente documento se encuentran los requisitos del sistema:
+[Enlace al documento Requisitos del sistema](https://github.com/alu0100944723/ADBD/blob/master/Proyecto%20Final/Requisitos%20del%20sistema.pdf)
 #### Modelo E/R
-()
+En el siguiente documento se encuentran las definiciones del diagrama E/R:
+[Enlace al documento ERE](https://github.com/alu0100944723/ADBD/blob/master/Proyecto%20Final/ERE.pdf)
 #### Modelo Relacional
+En el siguiente documento se encuentran las definiciones del Modelo Relacional:
+[Enlace al documento ](https://github.com/alu0100944723/ADBD/blob/master/Proyecto%20Final/GrafoRelacional.pdf)
 #### Diagrama UML
+[Enlace al documento ASIClases](http://github.com)
 #### Scripts
+[Enlace al Script](https://github.com/alu0100944723/ADBD/blob/master/Proyecto%20Final/Scrip_Cargadedatos.sql)
+[Enlace al documento ScriptCreation](http://github.com) 
+##### Código para la creación de las tablas:
 ```SQL
 
 -- -----------------------------------------------------
@@ -305,4 +315,213 @@ CREATE TABLE IF NOT EXISTS compra_clientecontado (
  ;
 
 ```
+##### Código para la inserción en las tablas:
+```SQL
+
+-- -----------------------------------------------------
+-- Data for table Producto
+-- -----------------------------------------------------
+START TRANSACTION;
+
+INSERT INTO Producto (ID, Lote, Variedad, Epoca, Fecha_Recogida, Fecha_Caducidad, Tipo, Precio_KG, Stock) VALUES (001, 1230, NULL, 'Verano', '20/06/2020', '30/06/2020', 'Fruta', 1.2, 12.5);
+INSERT INTO Producto (ID, Lote, Variedad, Epoca, Fecha_Recogida, Fecha_Caducidad, Tipo, Precio_KG, Stock) VALUES (002, 4512, NULL, 'Verano', '23/06/2020', '03/07/2020', 'Verdura', 1.5, 8.2);
+INSERT INTO Producto (ID, Lote, Variedad, Epoca, Fecha_Recogida, Fecha_Caducidad, Tipo, Precio_KG, Stock) VALUES (003, 4147, NULL, 'Verano', '14/06/2020', '24/06/2020', 'Fruta', 2.2, 25.7);
+INSERT INTO Producto (ID, Lote, Variedad, Epoca, Fecha_Recogida, Fecha_Caducidad, Tipo, Precio_KG, Stock) VALUES (004, 7854, NULL, 'Verano', '18/06/2020', '28/06/2020', 'Verdura', 3.3, 6.5);
+INSERT INTO Producto (ID, Lote, Variedad, Epoca, Fecha_Recogida, Fecha_Caducidad, Tipo, Precio_KG, Stock) VALUES (005, 1210, NULL, 'Verano', '16/06/2020', '27/06/2020', 'Fruta', 2.1, 7.12);
+INSERT INTO Producto (ID, Lote, Variedad, Epoca, Fecha_Recogida, Fecha_Caducidad, Tipo, Precio_KG, Stock) VALUES (002, 6666, NULL, 'Verano', '30/06/2020', '12/07/2020', 'Verdura', 1.4, 8.9);
+
+COMMIT;
+
+
+-- -----------------------------------------------------
+-- Data for table Productor_local
+-- -----------------------------------------------------
+START TRANSACTION;
+
+INSERT INTO Productor_local (NIF, Teléfono, Email) VALUES ('78454511L', 789123654, 'dkljdas@ddd.com');
+
+COMMIT;
+
+
+-- -----------------------------------------------------
+-- Data for table Pedido
+-- -----------------------------------------------------
+START TRANSACTION;
+
+INSERT INTO Pedido (ID, Total, Cantidad) VALUES (001, NULL, 20);
+INSERT INTO Pedido (ID, Total, Cantidad) VALUES (002, NULL, 8);
+INSERT INTO Pedido (ID, Total, Cantidad) VALUES (003, NULL, 6);
+INSERT INTO Pedido (ID, Total, Cantidad) VALUES (004, NULL, 4);
+
+COMMIT;
+
+
+-- -----------------------------------------------------
+-- Data for table Compra
+-- -----------------------------------------------------
+START TRANSACTION;
+
+INSERT INTO Compra (Fecha_compra, ID_Ticket, Importe) VALUES ('25/12/2018', 001, NULL);
+INSERT INTO Compra (Fecha_compra, ID_Ticket, Importe) VALUES ('24/03/2019', 002, NULL);
+INSERT INTO Compra (Fecha_compra, ID_Ticket, Importe) VALUES ('28/12/2019', 002, NULL);
+INSERT INTO Compra (Fecha_compra, ID_Ticket, Importe) VALUES ('28/06/2020', 003, NULL);
+
+COMMIT;
+
+
+-- -----------------------------------------------------
+-- Data for table Empleado
+-- -----------------------------------------------------
+START TRANSACTION;
+
+INSERT INTO Empleado (NSS, DNI, Salario, Turno, Fecha_inicio_contrato, Fecha_fin_contrato, Tipo) VALUES ('789456123578945', '46588811M',NULL , 'Tarde', '12/02/2018', '22/02/2020', 'Parcial');
+INSERT INTO Empleado (NSS, DNI, Salario, Turno, Fecha_inicio_contrato, Fecha_fin_contrato, Tipo) VALUES ('789456123654784', '49855533O', NULL, 'Mañana', '25/06/2019', NULL, 'Fijo');
+
+COMMIT;
+
+
+-- -----------------------------------------------------
+-- Data for table Cliente_Credito
+-- -----------------------------------------------------
+START TRANSACTION;
+
+INSERT INTO Cliente_Credito (DNI, Nombre, Apellido1, Apellido2, Calle, Provincia, Codigo_Postal) VALUES ('47899955S', 'akd', 'fdfd', 'ddfd', 'fdfs', 'fdd', 98562);
+INSERT INTO Cliente_Credito (DNI, Nombre, Apellido1, Apellido2, Calle, Provincia, Codigo_Postal) VALUES ('46255588L', 'dfks', 'fgr', 'dfdf', 'dfdd', 'ffd', 78542);
+
+COMMIT;
+
+
+-- -----------------------------------------------------
+-- Data for table Pago
+-- -----------------------------------------------------
+START TRANSACTION;
+
+INSERT INTO Pago (Fecha_Pago, Fecha_Compra, ID_Ticket, NSS_Empleado, DNI_CCredito, Fecha_Límite) VALUES ('25/12/2018', '25/12/2018', 001, '789456123578945', NULL, NULL);
+INSERT INTO Pago (Fecha_Pago, Fecha_Compra, ID_Ticket, NSS_Empleado, DNI_CCredito, Fecha_Límite) VALUES ('29/03/2019', '24/03/2019', 002, '789456123578945', '47899955S', '09/04/2019');
+INSERT INTO Pago (Fecha_Pago, Fecha_Compra, ID_Ticket, NSS_Empleado, DNI_CCredito, Fecha_Límite) VALUES ('28/12/2019', '28/12/2019', 002, '789456123654784', NULL, NULL);
+INSERT INTO Pago (Fecha_Pago, Fecha_Compra, ID_Ticket, NSS_Empleado, DNI_CCredito, Fecha_Límite) VALUES ('28/06/2020', '28/06/2020', 003, '789456123654784', NULL, NULL);
+
+COMMIT;
+
+
+-- -----------------------------------------------------
+-- Data for table Distribuidor
+-- -----------------------------------------------------
+START TRANSACTION;
+
+INSERT INTO Distribuidor (NIF, Teléfono, Email) VALUES ('78544412P', 987456321, 'efdokd@dkkd.com');
+INSERT INTO Distribuidor (NIF, Teléfono, Email) VALUES ('54966688L', 985145821, 'dkjxhs@ksks.com');
+
+COMMIT;
+
+
+-- -----------------------------------------------------
+-- Data for table compra_clientecredito
+-- -----------------------------------------------------
+START TRANSACTION;
+
+INSERT INTO compra_clientecredito (ID_ticket, Fecha_compra, DNI) VALUES (002, '24/03/2019', '47899955S');
+
+COMMIT;
+
+
+-- -----------------------------------------------------
+-- Data for table Ganadero
+-- -----------------------------------------------------
+START TRANSACTION;
+
+INSERT INTO Ganadero (DNI, Nombre, Apellido1, Apellido2, Calle, Provincia, Codigo_Postal) VALUES ('46577788L', 'Ana', 'Sastre', 'Raste', 'jskl', 'soakl', 38521);
+INSERT INTO Ganadero (DNI, Nombre, Apellido1, Apellido2, Calle, Provincia, Codigo_Postal) VALUES ('45899932M', 'Lucas', 'Morado', 'Liso', 'ssd', 'sl', 39521);
+
+COMMIT;
+
+
+-- -----------------------------------------------------
+-- Data for table compra_ganadero
+-- -----------------------------------------------------
+START TRANSACTION;
+
+INSERT INTO compra_ganadero (ID_ticket, Fecha_compra, DNI) VALUES (003, '28/06/2020', '46577788L');
+
+COMMIT;
+
+
+-- -----------------------------------------------------
+-- Data for table Cliente_Contado
+-- -----------------------------------------------------
+START TRANSACTION;
+
+INSERT INTO Cliente_Contado (DNI, Nombre, Apellido1, Apellido2, Calle, Provincia, Codigo_Postal) VALUES ('47522277K', 'Mario', 'sds', 'dds', 'dgfd', 'gfss', 36874);
+INSERT INTO Cliente_Contado (DNI, Nombre, Apellido1, Apellido2, Calle, Provincia, Codigo_Postal) VALUES ('47566215L', 'Silvia', 'sd', 'dds', 'dfgfg', 'ffd', 38527);
+
+COMMIT;
+
+
+-- -----------------------------------------------------
+-- Data for table Producto_compra
+-- -----------------------------------------------------
+START TRANSACTION;
+
+INSERT INTO Producto_compra (ID_Producto, Lote, Fecha_Compra, ID_ticket, Peso) VALUES (001, 1230, '25/12/2018', 001, 2.5);
+INSERT INTO Producto_compra (ID_Producto, Lote, Fecha_Compra, ID_ticket, Peso) VALUES (002, 4512, '25/12/2018', 001, 2.6);
+INSERT INTO Producto_compra (ID_Producto, Lote, Fecha_Compra, ID_ticket, Peso) VALUES (003, 4147, '24/03/2019', 002, 1);
+INSERT INTO Producto_compra (ID_Producto, Lote, Fecha_Compra, ID_ticket, Peso) VALUES (004, 7854, '24/03/2019', 002, 1.5);
+INSERT INTO Producto_compra (ID_Producto, Lote, Fecha_Compra, ID_ticket, Peso) VALUES (005, 1210, '24/03/2019', 002, 2.2);
+INSERT INTO Producto_compra (ID_Producto, Lote, Fecha_Compra, ID_ticket, Peso) VALUES (002, 6666, '28/12/2019', 002, 0.5);
+INSERT INTO Producto_compra (ID_Producto, Lote, Fecha_Compra, ID_ticket, Peso) VALUES (001, 1230, '28/12/2019', 002, 3);
+INSERT INTO Producto_compra (ID_Producto, Lote, Fecha_Compra, ID_ticket, Peso) VALUES (003, 4147, '28/12/2019', 002, 2.2);
+INSERT INTO Producto_compra (ID_Producto, Lote, Fecha_Compra, ID_ticket, Peso) VALUES (004, 7854, '28/06/2020', 003, 1);
+
+COMMIT;
+
+
+-- -----------------------------------------------------
+-- Data for table Producto_Pedido
+-- -----------------------------------------------------
+START TRANSACTION;
+
+INSERT INTO Producto_Pedido (Lote, ID_Producto, ID_pedido) VALUES (1230, 001, 001);
+INSERT INTO Producto_Pedido (Lote, ID_Producto, ID_pedido) VALUES (4512, 002, 001);
+INSERT INTO Producto_Pedido (Lote, ID_Producto, ID_pedido) VALUES (4147, 003, 002);
+INSERT INTO Producto_Pedido (Lote, ID_Producto, ID_pedido) VALUES (7854, 004, 003);
+INSERT INTO Producto_Pedido (Lote, ID_Producto, ID_pedido) VALUES (1210, 005, 004);
+INSERT INTO Producto_Pedido (Lote, ID_Producto, ID_pedido) VALUES (6666, 002, 002);
+
+COMMIT;
+
+
+-- -----------------------------------------------------
+-- Data for table Productorlocal_pedido
+-- -----------------------------------------------------
+START TRANSACTION;
+
+INSERT INTO Productorlocal_pedido (NIF, ID_Pedido) VALUES ('78454511L', 003);
+INSERT INTO Productorlocal_pedido (NIF, ID_Pedido) VALUES ('78454511L', 004);
+
+COMMIT;
+
+
+-- -----------------------------------------------------
+-- Data for table Distribuidor_pedido
+-- -----------------------------------------------------
+START TRANSACTION;
+
+INSERT INTO Distribuidor_pedido (NIF, ID_Pedido, Etiqueta_origen) VALUES ('78544412P', 001, '1234565678');
+INSERT INTO Distribuidor_pedido (NIF, ID_Pedido, Etiqueta_origen) VALUES ('54966688L', 002, '4785456647');
+
+COMMIT;
+
+
+-- -----------------------------------------------------
+-- Data for table compra_clientecontado
+-- -----------------------------------------------------
+START TRANSACTION;
+
+INSERT INTO compra_clientecontado (ID_ticket, Fecha_compra, DNI) VALUES (001, '25/12/2018', '47566215L');
+INSERT INTO compra_clientecontado (ID_ticket, Fecha_compra, DNI) VALUES (002, '28/12/2019', '47566215L');
+
+COMMIT;
+```
 #### Carga de los datos y pruebas
+Dentro del siguiente documento se encuentran las pruebas de todos los scripts:
+[Enlace al documento CSI8](http://github.com)
