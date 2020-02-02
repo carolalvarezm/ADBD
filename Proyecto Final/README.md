@@ -546,7 +546,7 @@ ON Producto FOR EACH ROW
 EXECUTE PROCEDURE DescontarCincuentaPorCiento();
 ```
 ##### Disparador para los productos a punto de agotarse:
-[Enlace al Script](https://github.com/alu0100944723/ADBD/blob/master/Proyecto%20Final/cincoDiasTrigger.sql)
+[Enlace al Script](https://github.com/alu0100944723/ADBD/blob/master/Proyecto%20Final/productoApunteAgotarseTrigger.sql)
 ```SQL
 
 CREATE OR REPLACE FUNCTION pedirProducto()
