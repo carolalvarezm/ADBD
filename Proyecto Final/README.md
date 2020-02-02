@@ -560,7 +560,12 @@ CREATE TRIGGER SOLICIRAR_PRODUCTO AFTER UPDATE
 ON Producto FOR EACH ROW 
 EXECUTE PROCEDURE pedirProducto();
 ```
-
+##### Disparador para vender a los ganaderos los productos cerca de la fecha de caducidad:
+[Enlace al Script](https://github.com/alu0100944723/ADBD/blob/master/Proyecto%20Final/productoApunteAgotarseTrigger.sql)
+```SQL
+CREATE TRIGGER VenderComoAbono AFTER UPDATE ON Producto FOR EACH ROW 
+INSERT INTO compra_ganadero(ID_ticket,Fecha_compra) VALUES(NEW.ID,NEW.Lote) WHERE Fecha_Caducidad <= now() - interval 5 day;
+```
 
 #### Carga de los datos y pruebas
 Dentro del siguiente documento se encuentran las pruebas de todos los scripts:
