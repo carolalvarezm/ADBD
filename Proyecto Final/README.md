@@ -7,11 +7,14 @@ En el siguiente documento se encuentran los requisitos del sistema:
 #### Modelo E/R
 En el siguiente documento se encuentran las definiciones del diagrama E/R:
 [Enlace al documento ERE](https://github.com/alu0100944723/ADBD/blob/master/Proyecto%20Final/ERE.pdf)
+![Diagrama E/R](https://github.com/alu0100944723/ADBD/blob/master/Proyecto%20Final/Modelo%20E-R.png)
 #### Modelo Relacional
 En el siguiente documento se encuentran las definiciones del Modelo Relacional:
 [Enlace al documento ](https://github.com/alu0100944723/ADBD/blob/master/Proyecto%20Final/GrafoRelacional.pdf)
+![Grafo Relacional](https://github.com/alu0100944723/ADBD/blob/master/Proyecto%20Final/Modelo%20Relacional.png)
 #### Diagrama UML
 [Enlace al documento ASIClases](http://github.com)
+![Diagrama UML](https://octodex.github.com/images/yaktocat.png)
 #### Scripts
 [Enlace al Script de creación](https://github.com/alu0100944723/ADBD/blob/master/Proyecto%20Final/Scrip_Cargadedatos.sql)
 [Enlace al documento ScriptCreation](http://github.com) 
