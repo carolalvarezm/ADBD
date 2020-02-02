@@ -13,7 +13,7 @@ En el siguiente documento se encuentran las definiciones del Modelo Relacional:
 #### Diagrama UML
 [Enlace al documento ASIClases](http://github.com)
 #### Scripts
-[Enlace al Script](https://github.com/alu0100944723/ADBD/blob/master/Proyecto%20Final/Scrip_Cargadedatos.sql)
+[Enlace al Script de creación](https://github.com/alu0100944723/ADBD/blob/master/Proyecto%20Final/Scrip_Cargadedatos.sql)
 [Enlace al documento ScriptCreation](http://github.com) 
 ##### Código para la creación de las tablas:
 ```SQL
@@ -522,6 +522,24 @@ INSERT INTO compra_clientecontado (ID_ticket, Fecha_compra, DNI) VALUES (002, '2
 
 COMMIT;
 ```
+##### Disparador para restar el 50% del precio del producto al pasar cinco días de la recogida:
+[Enlace al Script](https://github.com/alu0100944723/ADBD/blob/master/Proyecto%20Final/cincoDiasTrigger.sql)
+```SQL
+
+CREATE OR REPLACE FUNCTION DescontarCincuentaPorCiento()
+RETURNS TRIGGER AS $DescontarCincuentaPorCiento()$
+BEGIN
+UPDATE Producto SET Precio_KG = Precio_KG /2 WHERE Fecha_Recogida <= now() - interval 5 day;
+END;
+$DescontarCincuentaPorCiento()$ LANGUAGE plpgsql;
+
+
+
+CREATE TRIGGER mucho_tiempo_almacen AFTER UPDATE
+ON Producto FOR EACH ROW
+EXECUTE PROCEDURE DescontarCincuentaPorCiento();
+```
+
 #### Carga de los datos y pruebas
 Dentro del siguiente documento se encuentran las pruebas de todos los scripts:
 [Enlace al documento CSI8](http://github.com)
